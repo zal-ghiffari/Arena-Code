@@ -1,5 +1,12 @@
 import tkinter
 import random
+import argparse
+
+parser = argparse.ArgumentParser(description= 'Program Usage.')
+parser.add_argument("-e", "--email", help = "gmail account")
+parser.add_argument("-p", "--password", help = "gmail password")
+args = parser.parse_args()
+print(args.accumulate(args))
 
 class PWGenGui(tkinter.Frame):
     def __init__(self, master=None):
